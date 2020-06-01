@@ -46,7 +46,7 @@ Outlines are created by calculating the local derivative of the z-value using a 
 for PDB entry 2hhb (Hemoglobin)
 
     read                                        #READ command
-    ~/Illustrate-master/2hhb.pdb                       #PDB format coordinate file
+    ~/Illustrate/2hhb.pdb                       #PDB format coordinate file
     HETATM-----HOH-- 0,9999, 0.5,0.5,0.5, 0.0          #selection/rendering cards
     ATOM  -H-------- 0,9999, 0.5,0.5,0.5, 0.0          # omits hydrogens
     ATOM  H--------- 0,9999, 0.5,0.5,0.5, 0.0          # omits hydrogens with long atom names
