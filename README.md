@@ -20,7 +20,7 @@ Compile the fortran code:
 
 Run the program:
 
-    illustrate < command_file
+    ./illustrate < command_file
 
 Command file is read from unit 5 (standard in), and a bunch of diagnostic stuff is written to unit 6 (standard out)
 
