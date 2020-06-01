@@ -1,0 +1,36 @@
+read                                        #READ command
+/Users/chambersmj/Downloads/Illustrate-master/2hhb.pdb                                         #PDB format coordinate file
+HETATM-----HOH-- 0,9999, 0.5,0.5,0.5, 0.0        #selection/rendering cards
+ATOM  -H-------- 0,9999, 0.5,0.5,0.5, 0.0          # omits hydrogens
+ATOM  H--------- 0,9999, 0.5,0.5,0.5, 0.0          # omits hydrogens with long atom names
+ATOM  -C-------A 0,9999, 1.0,0.6,0.6, 1.6          # draws carbon atoms in chain A, pink
+ATOM  -S-------A 0,9999, 1.0,0.5,0.5, 1.8
+ATOM  ---------A 0,9999, 1.0,0.5,0.5, 1.5          # draws the rest of chain A atoms
+ATOM  -C-------C 0,9999, 1.0,0.6,0.6, 1.6          # similarly for chain C
+ATOM  -S-------C 0,9999, 1.0,0.5,0.5, 1.8
+ATOM  ---------C 0,9999, 1.0,0.5,0.5, 1.5
+ATOM  -C-------- 0,9999, 1.0,0.8,0.6, 1.6          # draws remaining protein carbons, light orange
+ATOM  -S-------- 0,9999, 1.0,0.7,0.5, 1.8
+ATOM  ---------- 0,9999, 1.0,0.7,0.5, 1.5
+HETATMFE---HEM-- 0,9999, 1.0,0.8,0.0, 1.8          # draws heme iron, yellow
+HETATM-C---HEM-- 0,9999, 1.0,0.3,0.3, 1.6
+HETATM-----HEM-- 0,9999, 1.0,0.1,0.1, 1.5
+END                                                #end of READ command
+center                                       #CENTER command
+auto                                             #use autocentering
+trans                                        #TRANSLATION command
+0.,0.,0.                                         #x,y,z for translation
+scale                                        #SCALE command
+12.0                                             #scale value (pixels/A)
+zrot                                         #ROTATION command
+90.                                              #rotation angle (deg)
+wor                                          #WORLD command (rendering parameters)
+1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0                  #rgbback, rgbfog, fogparams
+1,0.0023,2.0,1.0,0.2                             #soft shadow parameters
+-30,-30                                          #image size with autosizing
+illustrate                                   #ILLUSTRATION command
+3.0,10.0,4,0.0,5.0                               #contour outlines
+3.0,10.0                                         #subunit outlines
+3.0,8.0,6000.                                    #residue outlines
+calculate                                    #CALCULATE command
+2hhb.pnm                                         #image file name in ppm 
